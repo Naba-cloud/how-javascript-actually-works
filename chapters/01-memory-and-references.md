@@ -19,7 +19,6 @@ const copy = user;
 
 copy.name = "Ali";
 ```
-
 # Why Does Changing `copy` Also Change `user`?
 
 Imagine you're working on a production application.
@@ -40,7 +39,7 @@ console.log(user.name);
 
 What do you expect to see?
 
-Most developers answer:
+Is your answer is:
 
 ```js
 "Aline"
@@ -66,7 +65,7 @@ To answer that question, we need to look inside JavaScript's memory.
 
 ---
 
-## Let's Follow the Data
+## Let's Explore 
 
 When JavaScript executes:
 
@@ -109,7 +108,7 @@ The variable only stores the address of that house.
 
 ---
 
-## The Mistake Most Developers Make
+## The Mistake We Make
 
 When they see:
 
@@ -117,7 +116,7 @@ When they see:
 const copy = user;
 ```
 
-many developers imagine this:
+many of you imagine this:
 
 ```text
 user ──────► Object A
@@ -205,7 +204,7 @@ There was only one.
 
 So how do we create a new object?
 
-Most developers use the spread operator.
+Most of use the spread operator.
 
 ```js
 const copy = {
@@ -228,7 +227,7 @@ copy ──────► 0x002
 0x001               0x002
 
 {                    {
-  name:"Naba"          name:"Naba"
+  name:"Aline"          name:"Aline"
 }                    }
 ```
 
@@ -236,7 +235,7 @@ Perfect.
 
 Problem solved.
 
-Or is it?
+Or is it not?
 
 ---
 
@@ -267,7 +266,7 @@ copy.address.city = "Lahore";
 
 Will `user.address.city` stay `"Karachi"`?
 
-Most developers confidently answer:
+Most people confidently answer:
 
 > Yes, because we created a copy.
 
@@ -378,7 +377,7 @@ Even though we never modified `user`.
 
 # Why `structuredClone()` Exists
 
-Developers kept running into this problem.
+We kept running into this problem.
 
 They wanted a copy that duplicated everything.
 
@@ -419,13 +418,19 @@ No surprises.
 And that's the real difference between a shallow copy and a deep copy.
 
 ---
+## Quick Challenge
 
-## Key Takeaways
+Without running the code, predict the output:
 
-- Objects are stored in the Heap.
-- Variables store references to objects.
-- Assigning an object copies the reference, not the object.
-- The spread operator creates a shallow copy.
-- Nested objects remain shared in a shallow copy.
-- `structuredClone()` creates a true deep copy.
+```js
+const user = {
+  profile: {
+    city: "Karachi"
+  }
+};
 
+const copy = { ...user };
+
+copy.profile.city = "Lahore";
+
+console.log(user.profile.city);
