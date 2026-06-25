@@ -38,5 +38,5 @@ The goal is to help developers understand not just what JavaScript does, but why
 10. The `this` Keyword
 11. Event Loop
 12. Promises
-
+13. Bonus(Wierdest Part Of JS)
 
