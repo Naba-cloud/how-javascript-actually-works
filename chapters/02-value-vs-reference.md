@@ -248,19 +248,35 @@ function greet() {
 ```js
 console.log("typeof skills",typeof skills)
 console.log("typeof greet",typeof greet)
-console.log("typeof greet",typeof function)
+console.log("greet",greet instanceof Object)
 ```
 ### Output
 ```
 Object
 function
+true
 ```
 
-Even though they look different, JavaScript treats them as objects behind the scenes.
+At this point, we've uncovered something interesting.
 
-And this is where things get interesting.
+Functions aren't just pieces of code that can be executed.
 
-While primitives are copied by value, objects are copied by reference.
+They're also objects.
 
-As you'll soon discover, that one difference is responsible for many of JavaScript's most confusing behaviors.
+```js
+function greet() {}
 
+console.log(greet instanceof Object); // true
+```
+
+That might seem strange at first, but it opens the door to some fascinating questions.
+
+How can something be both a function and an object?
+
+What special powers do functions have that regular objects don't?
+
+And why does JavaScript treat them differently?
+
+Let's find out.
+
+In the next chapter, we'll take a closer look at functions and discover what actually makes them special.
