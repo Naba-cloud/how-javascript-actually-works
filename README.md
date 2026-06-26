@@ -5,38 +5,46 @@ A practical deep dive into the concepts that power JavaScript under the hood.
 
 This book focuses on the mental models behind JavaScript rather than memorizing syntax.
 
-Topics include:
-
-* Stack vs Heap Memory
-* References and Memory Allocation
-* Shallow Copy vs Deep Copy
-* Execution Context
-* Hoisting
-* Temporal Dead Zone
-* Scope and Closures
-* Prototype Chain
-* The `this` Keyword
-* Event Loop
-* Promises
-* Async/Await
-* Type Coercion
-* Garbage Collection
-
 The goal is to help developers understand not just what JavaScript does, but why it behaves the way it does.
 
 ## Table of Contents
 
-1. Memory and References
-2. Shallow Copy vs Deep Copy
-3. Execution Context
-4. Hoisting
-5. Temporal Dead Zone
-6. Scope
-7. Closures
-8. Objects
-9. Prototype Chain
-10. The `this` Keyword
-11. Event Loop
-12. Promises
-13. Bonus(Wierdest Part Of JS)
+Chapter 1
+The Bug That Shouldn't Exist
+
+Chapter 2
+Two Kinds of Values
+
+Chapter 3
+Everything Isn't What It Seems
+
+Chapter 4
+The Secret Life of Objects
+
+-------------------------
+
+Chapter 5
+The Moment You Press Run
+
+Chapter 6
+JavaScript's Workspace
+(Execution Context)
+
+Chapter 7
+The Call Stack
+
+Chapter 8
+Why JavaScript Knows About Variables Before You Do
+(Hoisting + TDZ)
+
+Chapter 9
+The Memory That Refuses to Forget
+(Scope + Closures)
+
+Chapter 10
+Time in JavaScript
+(Event Loop + Promises + async/await)
+
+Chapter 11 (Optional / Second Edition)
+JavaScript's Greatest Mysteries
 
